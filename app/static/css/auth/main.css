@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+body {height: 100vh; display:flex; align-items: center; justify-content: center; background-color: #FFFFFF; font-family: 'Arimo'; margin:0;}
+
+.registration-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap:18px;
+}
+
+.controls-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 18px;
+}
+
+input[type="text"],input[type="password"]{
+    width: 160px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #D7EDD5;
+    outline: none;
+    padding: 2px 6px;
+    box-sizing: border-box;
+    text-align: center;
+    height: 26px;
+}
+label{
+    color: #70786F;
+    font-family: Arimo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: rgba(215, 237, 213, 0.40) !important;
+    color: fieldtext !important;
+}
+
+input:focus-visible {
+    outline: #B1CEAE auto 0.5px;
+}
+
+.login-controls, .pass-controls, .pass-again-controls{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: start;
+}
+
+.registration-container .header{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: start;
+}
+
+.simple-btn{
+    width: 160px;
+    border: none;
+    border-radius: 40px;
+    background: #D7EDD5;
+    padding: 5px 0px 5px 0px;
+    color: #70786F;
+    text-align: center;
+    font-family: Arimo;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 12px */
+    text-transform: uppercase;
+    height: 26px;
+}
+
+.simple-btn:hover{
+    background: #C5D8C3;
+}
+
+.simple-btn:active{
+    background: #9FAD9E;
+}
+
+.registration-container .header .title{
+    color: #70786F;
+    font-family: Arimo;
+    font-size: 21.787px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.wrong{
+    border-color: #FEDDD5 !important;
+}
+
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+  border: 0;
+  border-radius: .25em;
+  background: initial;
+    background-color: initial;
+    background-image: initial;
+  background: #D7EDD5 !important;
+  color: #70786F !important;
+  font-size: 1em;
+}
+
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {
+  box-shadow: 0 0 0 3px #70786F !important;
+}

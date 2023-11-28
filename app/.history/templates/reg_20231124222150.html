@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/css/auth/main.css" />
+    <title>The FLow</title>
+  </head>
+  <body>
+    <div class="registration-container">
+      <div class="header">
+        <img src="/static/svg/big-logo.svg" alt="" />
+        <div class="title">РЕГИСТРАЦИЯ</div>
+      </div>
+
+      <form id="reg-form" action="" method="POST" class="form-example">
+          {{ form.hidden_tag() }}
+          <div class="controls-container">
+              <div class="login-controls">
+                  {{ form.email.label }} {{ form.email() }}
+              </div>
+              <div class="pass-controls">
+                  {{ form.password.label }} {{ form.password() }}
+              </div>
+              <div class="pass-again-controls">
+                  {{ form.confirm_password.label }} {{ form.confirm_password() }}
+              </div>
+              {{ form.submit() }}
+          </div>
+      </form>
+    </div>
+  </body>
+</html>

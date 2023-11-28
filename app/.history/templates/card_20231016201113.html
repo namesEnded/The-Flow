@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/card.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% for id in objectIDs %}
+    <div class="card">
+      <div class="img">
+        <img alt="triangle with equal sides" src="/api/img/{{ id }}" />
+      </div>
+      <div class="footer">
+        <div class="button-container">
+          <img
+            alt="triangle with equal sides"
+            srcset="/static/svg/del.svg"
+            onclick="deleteImage('{{ id }}')"
+          />
+        </div>
+        <div class="button-container">
+          <img
+            id="copy-icon"
+            alt="triangle with equal sides"
+            srcset="/static/svg/copy.svg"
+            onclick="copyImage('/api/img/{{ id }}')"
+          />
+        </div>
+        <div class="button-container">
+          <img
+            alt="triangle with equal sides"
+            srcset="/static/svg/download.svg"
+            onclick="downloadImage('/api/img/{{ id }}')"
+          />
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <script src="/static/js/card_control.js"></script>
+  </body>
+</html>

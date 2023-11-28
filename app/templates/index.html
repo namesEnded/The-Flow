@@ -1,0 +1,37 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rectangles Page</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .square {
+            width: 300px;
+            height: 300px;
+            background-color: white;
+        }
+        .rectangle {
+            margin: 5px;
+            background-color: {{ color }};
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="square"></div>
+        {% for color in colors %}
+            <div class="rectangle" style="width: {{ color.width }}px; height: {{ color.height }}px;"></div>
+        {% endfor %}
+    </div>
+    <form action="{{ url_for('add_color') }}" method="post">
+        <input type="text" name="name" placeholder="Color name">
+        <button type="submit">Add Color</button>
+    </form>
+</body>
+</html>

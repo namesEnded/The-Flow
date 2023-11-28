@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/css/auth/main.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>The FLow</title>
+  </head>
+  <body>
+    <div class="registration-container">
+      <div class="header">
+        <img src="/static/svg/big-logo.svg" alt="" />
+        <div class="title">ВХОД</div>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                        {% for message in messages %}
+                            <script>
+                                Swal.fire("{{ message }}");
+                            </script>
+                        {% endfor %}
+                {% endif %}
+            {% endwith %}
+      </div>
+
+      <form id="login-form" action="" method="POST" class="form-example">
+          {{ form.hidden_tag() }}
+          <div class="controls-container">
+              <div class="login-controls">
+                  {{ form.email.label }} {{ form.email() }}
+              </div>
+              <div class="pass-controls">
+                  {{ form.password.label }} {{ form.password() }}
+              </div>
+              {{ form.submit() }}
+          </div>
+      </form>
+    </div>
+  </body>
+</html>

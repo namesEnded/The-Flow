@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/microtip/microtip.css" />
+    <script src="https://unpkg.com/cropperjs/dist/cropper.js"></script>
+    <link
+      href="https://unpkg.com/cropperjs/dist/cropper.css"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="/static/svg/LOGO.svg" alt="Logo" />
+        <span>Flow</span>
+      </div>
+      <div class="middle-panel">
+        <div class="card-container">
+          <div class="container-title">
+            <div class="user-name"></div>
+            <a
+              href="/api/img"
+              onclick="event.preventDefault(); if(confirm('Вы уверены, что хотите удалить файл?')) {fetch('/api/img', {method: 'DELETE'}).then(response => response.json()).then(data => Swal.fire(data.message))}"
+              >Удалить файл</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

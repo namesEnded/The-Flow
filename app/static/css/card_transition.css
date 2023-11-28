@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+
+body {
+    background: #FFF;
+}
+
+.card {
+    border-radius: 30px;
+    background: #DFF1DD;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer {
+    width: 150px;
+    height: 38px;
+    border-radius: 0px 0px 30px 30px;
+    background: rgba(217, 217, 217, 0.50);
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .footer {
+    opacity: 1;
+}
+
+.footer img {
+    display: block;
+    width: 17px;
+    height: 17px;
+}
+.del-button{
+	background: url("/svg/del.svg") no-repeat center;
+	background-size: contain;
+}
